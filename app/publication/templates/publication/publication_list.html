@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+{% for publication in object_list %}
+
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="{% url 'detalle-publicacion' publication.pk %}">{{ publication.title }}</a> </h4>
+    <p>
+    	{{ publication.price }}
+    </p>
+  </div>
+  <div class="media-right">
+	<p> <h5>{{ publication.category }}</h5> </p>
+	<p> <h6>{{ publication.date_published | date }} </h6> </p>
+  </div>
+</div>
+
+<hr>
+{% endfor %} 
+
+
+{% endblock %}

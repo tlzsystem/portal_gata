@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{% load staticfiles %}
+	<title>{%block title%}{%endblock%} - Portal Gata</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{% static "css/sitio.css" %}" media="screen" />
+</head>
+<body>
+ 
+
+<section class="container">
+
+
+	   <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Portal Gata</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+</section>
+
+<div class="container theme-showcase" role="main">
+
+<div class="page-header">
+	<h3> Listado de avisos </h3>
+</div>
+	
+	{% block content %}{% endblock %}
+</div>
+
+ 
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="{% static "js/bootstrap.min.js" %}"></script>
+</body>
+</html>
