@@ -27,9 +27,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active"><a href="{% url 'sitio:home' %}">Home</a></li>
+            <li><a href="{% url 'sitio:about' %}">Conoce</a></li>
+            <li><a href="{% url 'sitio:contact' %}">Contacto</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -40,11 +40,10 @@
 
 <div class="container theme-showcase" role="main">
 
-<div class="page-header">
-	<h3> Listado de avisos </h3>
-</div>
+    {% block content %}
+
 	
-	{% block content %}{% endblock %}
+	{% endblock %}
 </div>
 
  

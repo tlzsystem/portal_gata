@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Bienvenido a Portal Gata!</h1>
+        <p>El nuevo portal de avisos en donde encontrarás de todo.</p>
+        <p><a class="btn btn-primary btn-lg" href="{% url 'sitio:about' %}" role="button">Conoce más &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Mira las publicaciones</h2>
+          <p>Accede al sitio para ver las publicaciones de usuarios. Es totalmente gratis! </p>
+          <p><a class="btn btn-default" href="#" role="button">Ver publicaciones &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Registrate</h2>
+          <p>Crea una cuenta gratuita para comenzar a publicar todo tipo de avisos. Es Gratis!</p>
+          <p><a class="btn btn-default" href="#" role="button">Registrar &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Publica</h2>
+          <p>Si ya tienes una cuenta, comienza a publicar tus avisos.</p>
+          <p><a class="btn btn-default" href="#" role="button">Publicar &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+{% endblock %}
